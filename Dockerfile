@@ -4,7 +4,7 @@ LABEL maintainer="programming@bymatej.com"
 # Source: https://github.com/xmrig/xmrig
 
 ARG DEBIAN_FRONTEND=noninteractive
-ENV XMRIG_JSON_CONFIG_PATH=
+ENV XMRIG_JSON_CONFIG_PATH=/xmrig/config.json
 
 # Update, install dependencies and clone from Git
 RUN apt-get update
@@ -50,5 +50,4 @@ RUN apt-get -y autoremove && apt-get -y autoclean
 
 
 # Run xmrig
-WORKDIR /xmrig/
 CMD ["./xmrig", "-c", "$XMRIG_JSON_CONFIG_PATH"]
