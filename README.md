@@ -3,6 +3,9 @@ Docker image based on Ubuntu containing a custom build of XMRig with donations s
 
 
 # Disclaimer
+This image was made for fun and as an experiment. It works, but if you want to use it 
+use it at your own risk. Also, do not buy the mining rigs without prior research. :) 
+
 This project is based on XMRig.
 Check it out here: https://github.com/xmrig/xmrig
 
