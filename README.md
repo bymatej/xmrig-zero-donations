@@ -35,6 +35,18 @@ The name of the variable is `XMRIG_JSON_CONFIG_PATH`. Put your own path.
 Example: `docker run -itd --name "XMRig" -e XMRIG_JSON_CONFIG_PATH=config/config.json bymatej/xmrig-zero-donations:latest`
 
 
+# Resources
+You can find some good resources here.
+
+## Good XMR pools:
+I use SupportXMR. This is the URL: `pool.supportxmr.com:443`
+This is a good article on the topic: https://www.exodus.io/blog/best-monero-pools/
+
+## Good XMR wallets
+I use MyMonero. But there are other great wallets too.
+This is a good article on the topic: https://changelly.com/blog/best-monero-xmr-wallets/
+
+
 # Donations
 If you want to donate to me, use the following:
 - XMR: `42m3uMhLE3oAFSUKw8YyETR7VS31L95fS6Qe4ctwAEDiFmocEJ4T7kZfjNRK2iURFNS4a9MMFqjmuSHabprWAAroNSmxiMZ`
