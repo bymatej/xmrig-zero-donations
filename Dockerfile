@@ -4,7 +4,6 @@ LABEL maintainer="programming@bymatej.com"
 # Source: https://github.com/xmrig/xmrig
 
 ARG DEBIAN_FRONTEND=noninteractive
-ENV XMRIG_JSON_CONFIG_PATH=/xmrig/config.json
 
 # Update, install dependencies and clone from Git
 RUN apt-get update
@@ -40,14 +39,11 @@ RUN cmake ..
 RUN make
 
 # Cleanup
-RUN apt-get remove -y git \
-				      build-essential \
-				      cmake \
-				      libuv1-dev \
-				      libssl-dev \
-				      libhwloc-dev
+RUN apt-get remove -y git \ 
+                      build-essential \
+		      cmake
 RUN apt-get -y autoremove && apt-get -y autoclean
 
 
 # Run xmrig
-CMD ["./xmrig", "-c", "$XMRIG_JSON_CONFIG_PATH"]
+CMD ["./xmrig", "-c", "/config.json"]

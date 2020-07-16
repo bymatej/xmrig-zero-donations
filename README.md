@@ -26,18 +26,18 @@ Thank you!
 
 
 # Running XMRig using this image
-Build using this command: `docker run -d --name "XMRig" --mount type=bind,source=<path_to_your_local_conig.json_file>,target=/xmrig/config.json bymatej/xmrig-zero-donations:latest`
+Build using this command: `docker run -d --name "XMRig" --mount type=bind,source=<absolute_path_to_your_local_conig.json_file>,target=/config.json bymatej/xmrig-zero-donations:latest`
 
 ## Creating the config file
 You can create the config file using the wizard here: https://xmrig.com/wizard
 
 ## Passing the config file
-You need to pass the path to the config file in the source argument for `--mount`.
+You need to pass the **absolute path** to the config file in the source argument for `--mount`.
 It is the path on your local machine (outside of Docker). 
 This way you can easily change of the config.json file and just restart your container.
 I did not want to use volumes.
 
-Full example: `docker run -d --name "XMRig" --mount type=bind,source=config/config.json,target=/xmrig/config.json bymatej/xmrig-zero-donations:latest`
+Full example: `docker run -d --name "XMRig" --mount type=bind,source=/home/user/project/xmrig-zero-donations/config/config.json,target=/xmrig/config.json bymatej/xmrig-zero-donations:latest`
 
 The example above would mount the config.json file from this repo (assuming you ran the command in the root of the git repo folder).
 
